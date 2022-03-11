@@ -13,13 +13,19 @@
 
 @media (max-width: 980px) {
   .navbar__menu {
-    justify-content: center;
-    gap: 6rem;
+    justify-content: flex-start;
+    gap: 2rem;
   }
 }
 
 .navbar__menu__form {
   width: 49%;
+}
+
+@media (max-width: 980px) {
+  .navbar__menu__form {
+    width: 100%;
+  }
 }
 
 .navbar__menu__form__input-group {
@@ -54,6 +60,7 @@
 
 .navbar__menu__form__input-group button svg {
   font-size: 40px;
+  color: #333;
 }
 
 .navbar__menu__form__input-group__icon {
@@ -103,6 +110,7 @@
 
 .navbar__links__ubication__container__text p:last-child {
   font-size: 14px;
+  color: #333;
 }
 
 .navbar__links__list {
@@ -112,11 +120,17 @@
 }
 
 .navbar__links__list.user-data li {
-  color: #000;
+  color: #333;
+}
+
+.navbar__links__list.user-data li:last-child {
+  display: flex;
+  font-size: 20px;
 }
 
 .navbar__links__list li {
   margin-right: 25px;
   font-size: 14px;
   color: rgba(51, 51, 51, 0.6);
+  font-weight: 100;
 }
