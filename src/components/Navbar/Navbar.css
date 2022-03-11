@@ -1,0 +1,122 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff159;
+  padding: 8px;
+}
+
+.navbar__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 980px) {
+  .navbar__menu {
+    justify-content: center;
+    gap: 6rem;
+  }
+}
+
+.navbar__menu__form {
+  width: 49%;
+}
+
+.navbar__menu__form__input-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar__menu__form__input-group input {
+  width: 100%;
+  height: 37px;
+  padding-left: 15px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  color: #e6e6e6;
+}
+
+.navbar__menu__form__input-group input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+}
+
+.navbar__menu__form__input-group button {
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+}
+
+.navbar__menu__form__input-group button svg {
+  font-size: 40px;
+}
+
+.navbar__menu__form__input-group__icon {
+  font-size: 35px;
+  color: rgba(0, 0, 0, 0.4);
+  padding: 0 10px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar__publicity img {
+  max-width: 340px;
+  max-height: 39px;
+}
+
+@media (max-width: 980px) {
+  .navbar__publicity img {
+    display: none;
+  }
+}
+
+.navbar__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0 3px 0;
+}
+
+@media (max-width: 980px) {
+  .navbar__links {
+    display: none;
+  }
+}
+
+.navbar__links__ubication__container {
+  display: flex;
+  width: fit-content;
+}
+
+.navbar__links__ubication__container svg {
+  font-size: 25px;
+}
+
+.navbar__links__ubication__container__text p:first-child {
+  font-size: 12px;
+  color: rgba(51, 51, 51, 0.6);
+}
+
+.navbar__links__ubication__container__text p:last-child {
+  font-size: 14px;
+}
+
+.navbar__links__list {
+  display: flex;
+  align-items: flex-end;
+  padding: 4px;
+}
+
+.navbar__links__list.user-data li {
+  color: #000;
+}
+
+.navbar__links__list li {
+  margin-right: 25px;
+  font-size: 14px;
+  color: rgba(51, 51, 51, 0.6);
+}
