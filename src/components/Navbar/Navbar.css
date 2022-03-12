@@ -17,6 +17,27 @@
   }
 }
 
+.navbar__menu__logo__movil {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .navbar__menu__logo__movil {
+    display: block;
+  }
+}
+
+.navbar__menu__logo__desktop {
+  display: block;
+}
+
+@media (max-width: 980px) {
+  .navbar__menu__logo__desktop {
+    display: none;
+  }
+}
+
+
 .navbar__menu__form {
   width: 49%;
 }

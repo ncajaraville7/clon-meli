@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './Navbar.css';
 
 import logo from '../../assets/logo.png';
+import logoResponsive from '../../assets/logo_responsive.png';
 import publicity from '../../assets/publicity.webp';
 
 import { AiOutlineSearch } from 'react-icons/ai';
@@ -28,7 +29,8 @@ const Navbar = () => {
       <div className="navbar">
         <div className="navbar__menu container">
           <div className="navbar__menu__logo">
-            <img src={logo} alt="logo meli" />
+            <img src={logo} alt="logo meli" className='navbar__menu__logo__desktop'/>
+            <img src={logoResponsive} alt='logo responsive meli' className='navbar__menu__logo__movil'/>
           </div>
           <form className="navbar__menu__form">
             <div className="navbar__menu__form__input-group">
