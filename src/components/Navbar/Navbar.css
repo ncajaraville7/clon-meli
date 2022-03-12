@@ -14,7 +14,6 @@
 @media (max-width: 980px) {
   .navbar__menu {
     justify-content: flex-start;
-    gap: 2rem;
   }
 }
 
@@ -35,6 +34,13 @@
   border-radius: 2px;
   background-color: #fff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 980px) {
+  .navbar__menu__form__input-group {
+    width: 95%;
+    margin: 0 auto;
+  }
 }
 
 .navbar__menu__form__input-group input {
@@ -78,6 +84,20 @@
 @media (max-width: 980px) {
   .navbar__publicity img {
     display: none;
+  }
+}
+
+.navbar__hamburger-menu {
+  display: none;
+}
+
+.navbar__hamburger-menu svg {
+  font-size: 20px;
+}
+
+@media (max-width: 980px) {
+  .navbar__hamburger-menu {
+    display: flex;
   }
 }
 
