@@ -28,3 +28,13 @@
   flex-direction: column;
   background-color: #fff;
 }
+
+.search-text {
+  display: flex;
+  justify-content: center;
+}
+
+.search-text h2 {
+  font-weight: lighter;
+  font-size: 25px;
+}
