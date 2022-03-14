@@ -1,0 +1,30 @@
+.product {
+  width: 885px;
+}
+
+.product-list {
+  max-width: 1215px;
+  padding-left: 10px;
+  padding-right: 28px;
+  margin: 32px auto;
+  width: 100%;
+}
+
+@media (max-width: 980px) {
+  .product-list {
+    padding: 0;
+  }
+}
+
+.product-list__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 885px;
+  margin: 0 auto;
+}
+
+.product-list__container__items {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
