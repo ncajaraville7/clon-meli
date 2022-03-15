@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
-import ProductDetail from './components/Products/ProductDetail';
-import ProductListContainer from './components/Products/ProductListContainer';
+import ProductDetail from './components/Products/ProductDetail/ProductDetail';
+import ProductListContainer from './components/Products/ProductList/ProductListContainer';
 
 function App() {
   const [searchValue, setSearchValue] = useState('');
