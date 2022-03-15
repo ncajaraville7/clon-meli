@@ -3,11 +3,11 @@ import { useParams } from 'react-router-dom';
 
 import './ProductDetail.css';
 
-import { formatNumber } from '../../../helpers/formatNumber';
+import Aside from './Aside';
 
-import { BsHeart, BsHeartFill } from 'react-icons/bs';
-import { HiOutlineTruck } from 'react-icons/hi';
-import { IoReturnDownBack } from 'react-icons/io5';
+// import { formatNumber } from '../../../helpers/formatNumber';
+// import { HiOutlineTruck } from 'react-icons/hi';
+// import { IoReturnDownBack } from 'react-icons/io5';
 
 const ProductDetail = () => {
   const [detail, setDetail] = useState([]);
@@ -26,12 +26,9 @@ const ProductDetail = () => {
     getDetails();
   }, [productId]);
 
-  const { sold_quantity, title, price } = detail;
-  const calculateRates = Math.trunc(price / 12);
-
   return (
-    <div className="product-detail">
-      <p>hola</p>
+    <div className="product-detail container">
+      <Aside detail={detail} />
     </div>
   );
 };
