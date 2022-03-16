@@ -5,6 +5,12 @@
   width: 325px;
 }
 
+@media (max-width: 980px) {
+  .product-detail-aside {
+    width: 100%;
+  }
+}
+
 .product-detail-aside p {
   color: rgba(0, 0, 0, 0.55);
   font-size: 14px;

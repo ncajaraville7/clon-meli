@@ -4,10 +4,7 @@ import { useParams } from 'react-router-dom';
 import './ProductDetail.css';
 
 import Aside from './Aside';
-
-// import { formatNumber } from '../../../helpers/formatNumber';
-// import { HiOutlineTruck } from 'react-icons/hi';
-// import { IoReturnDownBack } from 'react-icons/io5';
+import Images from './Images';
 
 const ProductDetail = () => {
   const [detail, setDetail] = useState([]);
@@ -19,7 +16,7 @@ const ProductDetail = () => {
     );
     const data = await response.json();
     setDetail(data);
-    console.log(data);
+    // console.log(data);
   };
 
   useEffect(() => {
@@ -28,6 +25,7 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail container">
+      <Images detail={detail} />
       <Aside detail={detail} />
     </div>
   );

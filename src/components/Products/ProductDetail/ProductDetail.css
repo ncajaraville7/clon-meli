@@ -1,4 +1,14 @@
 .product-detail {
+  display: flex;
+  justify-content: space-between;
   background-color: #fff;
   border-radius: 4px;
+  margin-top: 30px;
+  padding: 18px;
+}
+
+@media (max-width: 980px) {
+  .product-detail {
+    flex-direction: column;
+  }
 }
