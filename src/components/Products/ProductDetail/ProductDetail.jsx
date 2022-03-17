@@ -3,8 +3,9 @@ import { useParams } from 'react-router-dom';
 
 import './ProductDetail.css';
 
-import Aside from './Aside';
-import Images from './Images';
+import BuyDetail from './Aside/BuyDetail';
+import SellerInfo from './Aside/SellerInfo';
+import Images from './Main/Images';
 
 const ProductDetail = () => {
   const [detail, setDetail] = useState([]);
@@ -16,7 +17,6 @@ const ProductDetail = () => {
     );
     const data = await response.json();
     setDetail(data);
-    console.log(data);
   };
 
   useEffect(() => {
@@ -25,8 +25,13 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail container">
-      <Images detail={detail} />
-      <Aside detail={detail} />
+      <main>
+        <Images detail={detail} />
+      </main>
+      <aside>
+        <BuyDetail detail={detail} />
+        <SellerInfo detail={detail} />
+      </aside>
     </div>
   );
 };
