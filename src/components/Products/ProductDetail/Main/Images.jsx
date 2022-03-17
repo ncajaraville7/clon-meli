@@ -7,6 +7,8 @@ const Images = ({ detail }) => {
 
   const { pictures } = detail;
 
+  console.log(pictures);
+
   const handleHover = (idImage) => {
     const findImage = pictures.find((item) => item.id === idImage);
     setPictureMain(findImage);

@@ -6,6 +6,7 @@ import './ProductDetail.css';
 import BuyDetail from './Aside/BuyDetail';
 import SellerInfo from './Aside/SellerInfo';
 import Images from './Main/Images';
+import SellerPublications from './Main/SellerPublications';
 
 const ProductDetail = () => {
   const [detail, setDetail] = useState([]);
@@ -17,6 +18,7 @@ const ProductDetail = () => {
     );
     const data = await response.json();
     setDetail(data);
+    console.log(data);
   };
 
   useEffect(() => {
@@ -27,6 +29,7 @@ const ProductDetail = () => {
     <div className="product-detail container">
       <main>
         <Images detail={detail} />
+        <SellerPublications detail={detail} />
       </main>
       <aside>
         <BuyDetail detail={detail} />

@@ -2,7 +2,10 @@ import React from 'react';
 
 import './SellerInfo.css';
 
+import { FaCheckCircle } from 'react-icons/fa';
 import { GoLocation } from 'react-icons/go';
+import { MdTimer } from 'react-icons/md';
+import { BiMessage } from 'react-icons/bi';
 
 const SellerInfo = ({ detail }) => {
   const { seller_address } = detail;
@@ -29,7 +32,30 @@ const SellerInfo = ({ detail }) => {
           <span></span>
           <span></span>
         </div>
-        <div className="product-detail-aside__reputation__stats"></div>
+        <div className="product-detail-aside__reputation__stats">
+          <div className="product-detail-aside__reputation__stats__content sale">
+            <strong>1274</strong>
+            <div className="product-detail-aside__reputation__stats__content__text">
+              <p>Ventas en los últimos 60 días</p>
+            </div>
+          </div>
+
+          <div className="product-detail-aside__reputation__stats__content icon">
+            <BiMessage className="product-detail-aside__iconOne" />
+            <FaCheckCircle className="product-detail-aside__iconTwo" />
+            <div className="product-detail-aside__reputation__stats__content__text">
+              <p>Brinda buena atención</p>
+            </div>
+          </div>
+
+          <div className="product-detail-aside__reputation__stats__content icon">
+            <MdTimer className="product-detail-aside__iconOne" />
+            <FaCheckCircle className="product-detail-aside__iconTwo" />
+            <div className="product-detail-aside__reputation__stats__content__text">
+              <p>Despacha sus productos a tiempo</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
