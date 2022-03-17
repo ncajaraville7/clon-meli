@@ -7,7 +7,7 @@ import logoResponsive from '../../assets/logo_responsive.png';
 import publicity from '../../assets/publicity.webp';
 
 import { AiOutlineSearch } from 'react-icons/ai';
-import { BiMap } from 'react-icons/bi';
+import { GoLocation } from 'react-icons/go';
 import { IoCartOutline } from 'react-icons/io5';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
@@ -75,7 +75,7 @@ const Navbar = ({ searchValue, setSearchValue, getProducts }) => {
         <div className="navbar__links container">
           <div className="navbar__links__ubication">
             <div className="navbar__links__ubication__container">
-              <BiMap />
+              <GoLocation />
               <div className="navbar__links__ubication__container__text">
                 <p>Enviar a</p>
                 <p>Buenos Aires</p>

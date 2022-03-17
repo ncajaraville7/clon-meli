@@ -16,7 +16,7 @@ const ProductDetail = () => {
     );
     const data = await response.json();
     setDetail(data);
-    // console.log(data);
+    console.log(data);
   };
 
   useEffect(() => {
