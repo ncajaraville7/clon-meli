@@ -106,9 +106,11 @@ const Aside = ({ detail }) => {
           <GoLocation />
           <div className="product-detail-aside__ubication__content">
             <p>Ubicación</p>
-            <p>
-              {seller_address.city.name}, {seller_address.state.name}
-            </p>
+            {seller_address !== undefined && (
+              <p>
+                {seller_address.city.name}, {seller_address.state.name}
+              </p>
+            )}
           </div>
         </div>
         <div className="product-detail-aside__reputation">
