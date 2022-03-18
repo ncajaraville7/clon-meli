@@ -1,62 +1,70 @@
 .publication-seller {
-  padding: 40px 0 26px 0;
+  margin-top: 40px;
+}
+
+@media (max-width: 980px) {
+  .publication-seller {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 20px;
+  }
 }
 
 .publication-seller h2 {
+  color: #333;
   font-size: 24px;
   font-weight: 400;
-  line-height: 1.25;
-  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 24px;
 }
 
 .publication-seller__products {
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 25px;
 }
 
-@media (max-width: 980px) {
-  .publication-seller__products {
-    overflow-x: scroll;
-  }
-}
-
-.publication-seller__products__card {
+.product-card {
+  width: 225px;
+  height: 375px;
+  cursor: pointer;
   border: 1px solid #f5f5f5;
   box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
-  cursor: pointer;
+  border-radius: 4px;
   transition: 0.3s;
 }
 
-.publication-seller__products__card:hover {
-  box-shadow: 5px 1px 10px 0 rgb(0 0 0 / 20%);
+.product-card:hover {
+  box-shadow: 0 7px 11px 0 rgb(0 0 0 / 10%), 0 2px 4px 0 rgb(0 0 0 / 10%);
 }
 
-.publication-seller__products__card__image {
-  height: 224px;
-  width: 224px;
-}
-
-.publication-seller__products__card__image img {
+.product-card img {
   width: 100%;
+  height: 225px;
   object-fit: contain;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
 }
 
-.publication-seller__products__card__text {
-  padding: 16px 12px 16px 16px;
-  border: 1px solid #f5f5f5;
-  width: 230px;
+.product-card__text {
+  padding: 8px 16px 16px 16px;
 }
 
-.publication-seller__products__card__text li:first-child {
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 24px;
+@media (max-width: 980px) {
+  .product-card__text {
+    width: 90%;
+  }
 }
 
-.publication-seller__products__card__text li:last-child {
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 14px;
+.product-card__text p:first-child {
+  font-size: 22px;
   font-weight: 400;
-  margin-top: 8px;
+  color: #333;
+  margin: 0 0 4px 0;
+  line-height: 1.15;
+}
+
+.product-card__text p:last-child {
+  font-size: 14px;
+  max-height: 2.6em;
+  /* overflow: hidden; */
+  color: rgba(0, 0, 0, 0.8);
 }

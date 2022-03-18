@@ -14,7 +14,14 @@ import { BiTrophy } from 'react-icons/bi';
 const BuyDetail = ({ detail }) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
-  const { sold_quantity, title, price, condition, available_quantity } = detail;
+  const {
+    sold_quantity,
+    title,
+    price,
+    condition,
+    available_quantity,
+    shipping,
+  } = detail;
 
   const handleFavorite = () => {
     if (!isFavorite) return setIsFavorite(true);
@@ -39,22 +46,24 @@ const BuyDetail = ({ detail }) => {
         <p>en 12x ${calculateRates(price)}</p>
         <p>Ver los medios de pago</p>
       </div>
-      <div className="product-detail-aside__shipping">
-        <div className="product-detail-aside__shipping__content">
-          <HiOutlineTruck />
-          <div className="product-detail-aside__shipping__content__text">
-            <p>Envío gratis a todo el país</p>
-            <p>Conocé los tiempos y las formas de envío.</p>
+      {shipping.free_shipping && (
+        <div className="product-detail-aside__shipping">
+          <div className="product-detail-aside__shipping__content">
+            <HiOutlineTruck />
+            <div className="product-detail-aside__shipping__content__text">
+              <p>Envío gratis a todo el país</p>
+              <p>Conocé los tiempos y las formas de envío.</p>
+            </div>
+          </div>
+          <div className="product-detail-aside__shipping__content">
+            <IoReturnDownBack />
+            <div className="product-detail-aside__shipping__content__text">
+              <p>Devolución gratis</p>
+              <p>Tienes 30 días desde que lo recibis.</p>
+            </div>
           </div>
         </div>
-        <div className="product-detail-aside__shipping__content">
-          <IoReturnDownBack />
-          <div className="product-detail-aside__shipping__content__text">
-            <p>Devolución gratis</p>
-            <p>Tienes 30 días desde que lo recibis.</p>
-          </div>
-        </div>
-      </div>
+      )}
       <div className="product-detail-aside__stock">
         <h3>Stock Disponible</h3>
         <div className="product-detail-aside__stock__qty">

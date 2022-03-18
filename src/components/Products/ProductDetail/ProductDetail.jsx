@@ -28,11 +28,11 @@ const ProductDetail = () => {
   return (
     <div className="product-detail container">
       <main>
-        <Images detail={detail} />
+        {detail.pictures && <Images detail={detail} />}
         <SellerPublications detail={detail} />
       </main>
       <aside>
-        <BuyDetail detail={detail} />
+        {detail.shipping && <BuyDetail detail={detail} />}
         <SellerInfo detail={detail} />
       </aside>
     </div>

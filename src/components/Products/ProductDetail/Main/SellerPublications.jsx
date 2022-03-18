@@ -6,7 +6,7 @@ import { formatNumber } from '../../../../helpers/formatNumber';
 
 const SellerPublications = ({ detail }) => {
   const [publications, setPublications] = useState([]);
-  const { seller_id, site_id, category_id } = detail;
+  const { seller_id, category_id } = detail;
 
   const getSellerPublications = async () => {
     const response = await fetch(
@@ -14,28 +14,27 @@ const SellerPublications = ({ detail }) => {
     );
     const data = await response.json();
     setPublications(data.results);
-    console.log(data);
   };
 
   useEffect(() => {
     getSellerPublications();
-  }, [publications]);
+  }, [category_id]);
 
-  const va = publications.slice(0, 3);
+  const productSlice = publications.slice(0, 3);
+
   return (
     <div className="publication-seller">
       <h2>Publicaciones del vendedor</h2>
       <div className="publication-seller__products">
-        {va.map((item) => (
-          <ul key={item.id} className="publication-seller__products__card">
-            <div className="publication-seller__products__card__image">
-              <img src={item.thumbnail} alt={item.title} />
+        {productSlice.map((item) => (
+          <div className="product-card">
+            <img src={item.thumbnail} alt={item.title} />
+
+            <div className="product-card__text">
+              <p>${formatNumber(item.price)}</p>
+              <p>{item.title}</p>
             </div>
-            <div className="publication-seller__products__card__text">
-              <li>${formatNumber(item.price)}</li>
-              <li>{item.title}</li>
-            </div>
-          </ul>
+          </div>
         ))}
       </div>
     </div>
