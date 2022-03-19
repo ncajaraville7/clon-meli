@@ -7,6 +7,8 @@ import BuyDetail from './Aside/BuyDetail';
 import SellerInfo from './Aside/SellerInfo';
 import Images from './Main/Images';
 import SellerPublications from './Main/SellerPublications';
+import Description from './Main/Description';
+import PaymentMethods from './Aside/PaymentMethods';
 
 const ProductDetail = () => {
   const [detail, setDetail] = useState([]);
@@ -30,10 +32,12 @@ const ProductDetail = () => {
       <main>
         {detail.pictures && <Images detail={detail} />}
         <SellerPublications detail={detail} />
+        {detail.id && <Description detail={detail} />}
       </main>
       <aside>
         {detail.shipping && <BuyDetail detail={detail} />}
         <SellerInfo detail={detail} />
+        <PaymentMethods />
       </aside>
     </div>
   );

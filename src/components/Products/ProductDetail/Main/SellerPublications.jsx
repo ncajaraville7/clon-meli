@@ -27,7 +27,7 @@ const SellerPublications = ({ detail }) => {
       <h2>Publicaciones del vendedor</h2>
       <div className="publication-seller__products">
         {productSlice.map((item) => (
-          <div className="product-card">
+          <div key={item.id} className="product-card">
             <img src={item.thumbnail} alt={item.title} />
 
             <div className="product-card__text">
