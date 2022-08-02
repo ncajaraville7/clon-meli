@@ -7,6 +7,4 @@ CSS
 
 # DEPLOYMENT
 
-EL PROYECTO AÚN SE ENCUENTRA EN DESARROLLO !
-
 https://clon-meli-ncajaraville.netlify.app/
